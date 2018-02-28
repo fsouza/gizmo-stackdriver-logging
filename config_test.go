@@ -18,7 +18,33 @@ func TestLoadConfigFromEnvironment(t *testing.T) {
 		name           string
 		envs           map[string]string
 		expectedConfig Config
-	}{}
+	}{
+		{
+			"full config",
+			map[string]string{
+				"LOGGING_LEVEL":                          "debug",
+				"LOGGING_ENVIRONMENT_VARIABLES":          "HOME,PWD",
+				"LOGGING_SEND_TO_STACKDRIVER":            "true",
+				"LOGGING_STACKDRIVER_ERROR_SERVICE_NAME": "logging-test",
+				"LOGGING_STACKDRIVER_ERROR_LOG_NAME":     "errors",
+			},
+			Config{
+				Level:                       "debug",
+				EnvironmentVariables:        []string{"HOME", "PWD"},
+				SendToStackDriver:           true,
+				StackDriverErrorServiceName: "logging-test",
+				StackDriverErrorLogName:     "errors",
+			},
+		},
+		{
+			"default values",
+			nil,
+			Config{
+				Level: "info",
+				StackDriverErrorLogName: "error_log",
+			},
+		},
+	}
 	for _, test := range tests {
 		t.Run(test.name, func(t *testing.T) {
 			setEnvs(test.envs)

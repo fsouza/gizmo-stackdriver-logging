@@ -15,19 +15,19 @@ import (
 
 // Config contains configuration for logging level and services integration.
 type Config struct {
-	Level string `envconfig:"LOG_LEVEL" default:"info"`
+	Level string `envconfig:"LOGGING_LEVEL" default:"info"`
 
 	// List of environment variables that should be included in all log
 	// lines.
-	EnvironmentVariables []string `envconfig:"LOG_ENVIRONMENT_VARIABLES"`
+	EnvironmentVariables []string `envconfig:"LOGGING_ENVIRONMENT_VARIABLES"`
 
 	// Send logs to StackDriver?
-	SendToStackDriver bool `envconfig:"LOG_SEND_TO_STACKDRIVER"`
+	SendToStackDriver bool `envconfig:"LOGGING_SEND_TO_STACKDRIVER"`
 
 	// StackDriver error reporting options. When present, error logs are
 	// going to be reported as errors on StackDriver.
-	StackDriverErrorServiceName string `envconfig:"LOG_STACKDRIVER_ERROR_SERVICE_NAME"`
-	StackDriverErrorLogName     string `envconfig:"LOG_STACKDRIVER_ERROR_LOG_NAME" default:"error_log"`
+	StackDriverErrorServiceName string `envconfig:"LOGGING_STACKDRIVER_ERROR_SERVICE_NAME"`
+	StackDriverErrorLogName     string `envconfig:"LOGGING_STACKDRIVER_ERROR_LOG_NAME" default:"error_log"`
 }
 
 // Logger returns a logrus logger with the features defined in the config.
