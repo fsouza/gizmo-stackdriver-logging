@@ -28,6 +28,11 @@ type Config struct {
 	// going to be reported as errors on StackDriver.
 	StackDriverErrorServiceName string `envconfig:"LOGGING_STACKDRIVER_ERROR_SERVICE_NAME"`
 	StackDriverErrorLogName     string `envconfig:"LOGGING_STACKDRIVER_ERROR_LOG_NAME" default:"error_log"`
+
+	// When StackDriverCredentialsFile is set, the logger will use the
+	// Google logging API to send the logs. Otherwise the fluentd Agent is
+	// used.
+	StackDriverCredentialsFile string `envconfig:"LOGGING_STACKDRIVER_CREDENTIALS_FILE"`
 }
 
 // Logger returns a logrus logger with the features defined in the config.
@@ -43,7 +48,12 @@ func (c *Config) Logger() (*logrus.Logger, error) {
 	logger.Hooks.Add(logrus_stack.StandardHook())
 	logger.Hooks.Add(logrus_env.NewHook(c.EnvironmentVariables))
 	if c.SendToStackDriver {
-		opts := []sdhook.Option{sdhook.GoogleLoggingAgent()}
+		var opts []sdhook.Option
+		if c.StackDriverCredentialsFile != "" {
+			opts = []sdhook.Option{sdhook.GoogleServiceAccountCredentialsFile(c.StackDriverCredentialsFile)}
+		} else {
+			opts = []sdhook.Option{sdhook.GoogleLoggingAgent()}
+		}
 		if c.StackDriverErrorServiceName != "" {
 			opts = append(opts,
 				sdhook.ErrorReportingService(c.StackDriverErrorServiceName),

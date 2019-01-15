@@ -20,7 +20,7 @@ func TestLoadConfigFromEnvironment(t *testing.T) {
 		expectedConfig Config
 	}{
 		{
-			"full config",
+			"full config - agent",
 			map[string]string{
 				"LOGGING_LEVEL":                          "debug",
 				"LOGGING_ENVIRONMENT_VARIABLES":          "HOME,PWD",
@@ -37,10 +37,29 @@ func TestLoadConfigFromEnvironment(t *testing.T) {
 			},
 		},
 		{
+			"full config - API",
+			map[string]string{
+				"LOGGING_LEVEL":                          "debug",
+				"LOGGING_ENVIRONMENT_VARIABLES":          "HOME,PWD",
+				"LOGGING_SEND_TO_STACKDRIVER":            "true",
+				"LOGGING_STACKDRIVER_ERROR_SERVICE_NAME": "logging-test",
+				"LOGGING_STACKDRIVER_ERROR_LOG_NAME":     "errors",
+				"LOGGING_STACKDRIVER_CREDENTIALS_FILE":   "/etc/google/credentials.json",
+			},
+			Config{
+				Level:                       "debug",
+				EnvironmentVariables:        []string{"HOME", "PWD"},
+				SendToStackDriver:           true,
+				StackDriverErrorServiceName: "logging-test",
+				StackDriverErrorLogName:     "errors",
+				StackDriverCredentialsFile:  "/etc/google/credentials.json",
+			},
+		},
+		{
 			"default values",
 			nil,
 			Config{
-				Level: "info",
+				Level:                   "info",
 				StackDriverErrorLogName: "error_log",
 			},
 		},
