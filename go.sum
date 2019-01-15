@@ -8,8 +8,8 @@ github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/facebookgo/stack v0.0.0-20160209184415-751773369052 h1:JWuenKqqX8nojtoVVWjGfOF9635RETekkoH6Cc9SX0A=
 github.com/facebookgo/stack v0.0.0-20160209184415-751773369052/go.mod h1:UbMTZqLaRiH3MsBH8va0n7s1pQYcu3uTb8G4tygF4Zg=
-github.com/fluent/fluent-logger-golang v1.3.0 h1:oBolFKS9fY9HReChzaX1RQF5GkdNdByrledPTfUWoGA=
-github.com/fluent/fluent-logger-golang v1.3.0/go.mod h1:2/HCT/jTy78yGyeNGQLGQsjF3zzzAuy6Xlk6FCMV5eU=
+github.com/fluent/fluent-logger-golang v1.4.0 h1:uT1Lzz5yFV16YvDwWbjX6s3AYngnJz8byTCsMTIS0tU=
+github.com/fluent/fluent-logger-golang v1.4.0/go.mod h1:2/HCT/jTy78yGyeNGQLGQsjF3zzzAuy6Xlk6FCMV5eU=
 github.com/golang/protobuf v1.2.0 h1:P3YflyNX/ehuJFLhxviNdFxQPkGK5cDcApsge1SqnvM=
 github.com/golang/protobuf v1.2.0/go.mod h1:6lQm79b+lXiMfvg/cZm0SGofjICqVBUtrP5yJMmIC1U=
 github.com/google/go-cmp v0.2.0 h1:+dTQ8DZQJz0Mb/HjFlkptS1FeQ4cWSnN941F8aEG4SQ=
@@ -20,8 +20,8 @@ github.com/knq/jwt v0.0.0-20180925223530-fc44a4704737 h1:1xIW/VaRuKqTia61AXVrIFt
 github.com/knq/jwt v0.0.0-20180925223530-fc44a4704737/go.mod h1:H6bRgq8JMACag/WS+QyO3B00Hx9JZTF/zUHxNhzkxqo=
 github.com/knq/pemutil v0.0.0-20180607233853-a6a7785bc45a h1:IPa47OrAMfRqw3RENZIMQF4rwU7doG3rNmvdzeeVYYQ=
 github.com/knq/pemutil v0.0.0-20180607233853-a6a7785bc45a/go.mod h1:2VjBu5gkjU1wG99pRhJ+zm/P4bHnjdRY0CIMP9Gvn7Q=
-github.com/knq/sdhook v0.0.0-20181029224735-f9c6ae1bf3ae h1:ev8XLM89ZSotqU9QlgLcYBnQZ8IwUgOaio1UBTqfxS0=
-github.com/knq/sdhook v0.0.0-20181029224735-f9c6ae1bf3ae/go.mod h1:02uf35sXC1eibt6gUs3Qj3LZfhgxlGlckfKIVXgLqSE=
+github.com/knq/sdhook v0.0.0-20190114230312-41b9ccbff0b5 h1:K/XIPlDNzUOLjG4qPhSatnVlmma7kfB8tpUiQukjkJ0=
+github.com/knq/sdhook v0.0.0-20190114230312-41b9ccbff0b5/go.mod h1:xneOdR9bxZt/0EInYiWOz9U07+AimqnjxFxRyndR8/0=
 github.com/konsorten/go-windows-terminal-sequences v0.0.0-20180402223658-b729f2633dfe/go.mod h1:T0+1ngSBFLxvqU3pZ+m/2kptfBszLMUkC4ZK/EgS/cQ=
 github.com/konsorten/go-windows-terminal-sequences v1.0.1 h1:mweAR1A6xJ3oS2pRaGiHgQ4OO8tzTaLawm8vnODuwDk=
 github.com/konsorten/go-windows-terminal-sequences v1.0.1/go.mod h1:T0+1ngSBFLxvqU3pZ+m/2kptfBszLMUkC4ZK/EgS/cQ=
@@ -42,8 +42,6 @@ github.com/sirupsen/logrus v1.2.0/go.mod h1:LxeOpSwHxABJmUn/MG1IvRgCAasNZTLOkJPx
 github.com/stretchr/objx v0.1.1/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
 github.com/stretchr/testify v1.2.2 h1:bSDNvY7ZPG5RlJ8otE/7V6gMiyenm9RtJ7IUVIAoJ1w=
 github.com/stretchr/testify v1.2.2/go.mod h1:a8OnRcib4nhh0OaRAV+Yts87kKdq0PP7pXfy6kDkUVs=
-github.com/tinylib/msgp v1.0.2 h1:DfdQrzQa7Yh2es9SuLkixqxuXS2SxsdYn0KbdrOGWD8=
-github.com/tinylib/msgp v1.0.2/go.mod h1:+d+yLhGm8mzTaHzB+wgMYrodPfmZrzkirds8fDWklFE=
 github.com/tinylib/msgp v1.1.0 h1:9fQd+ICuRIu/ue4vxJZu6/LzxN0HwMds2nq/0cFvxHU=
 github.com/tinylib/msgp v1.1.0/go.mod h1:+d+yLhGm8mzTaHzB+wgMYrodPfmZrzkirds8fDWklFE=
 golang.org/x/crypto v0.0.0-20180904163835-0709b304e793/go.mod h1:6SG95UA2DQfeDnfUPMdvaQW0Q7yPrPDi9nlGo2tz2b4=
