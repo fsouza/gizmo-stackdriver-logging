@@ -6,5 +6,5 @@ require (
 	github.com/kelseyhightower/envconfig v1.3.0
 	github.com/knq/sdhook v0.0.0-20190114230312-41b9ccbff0b5
 	github.com/marzagao/logrus-env v0.0.0-20170629235526-367f558eb6f3
-	github.com/sirupsen/logrus v1.2.0
+	github.com/sirupsen/logrus v1.3.0
 )
