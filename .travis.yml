@@ -1,10 +1,14 @@
 language: go
 sudo: false
+cache:
+  directories:
+    - $GOPATH/pkg
+    - $GOPATH/bin
 go:
-  - 1.11.x
+  - 1.x
   - tip
 install:
-  - go get honnef.co/go/tools/cmd/staticcheck
+  - go get honnef.co/go/tools/cmd/staticcheck@master
   - go mod download
 script:
   - staticcheck
