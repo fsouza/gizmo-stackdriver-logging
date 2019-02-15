@@ -1,6 +1,6 @@
 # gizmo-stackdriver-logging
 
-[![Build Status](https://travis-ci.org/fsouza/gizmo-stackdriver-logging.svg?branch=master)](https://travis-ci.org/fsouza/gizmo-stackdriver-logging)
+[![Build Status](https://travis-ci.com/fsouza/gizmo-stackdriver-logging.svg?branch=master)](https://travis-ci.com/fsouza/gizmo-stackdriver-logging)
 
 This repository provides a library that aims to provide a
 StackDriver-integrated logging library that follows
