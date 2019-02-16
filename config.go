@@ -7,9 +7,9 @@ package logging
 import (
 	"os"
 
-	"github.com/Gurpartap/logrus-stack"
+	logrus_stack "github.com/Gurpartap/logrus-stack"
 	"github.com/knq/sdhook"
-	"github.com/marzagao/logrus-env"
+	logrus_env "github.com/marzagao/logrus-env"
 	"github.com/sirupsen/logrus"
 )
 
