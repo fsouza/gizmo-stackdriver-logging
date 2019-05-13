@@ -8,3 +8,5 @@ require (
 	github.com/marzagao/logrus-env v0.0.0-20170629235526-367f558eb6f3
 	github.com/sirupsen/logrus v1.4.1
 )
+
+go 1.13
