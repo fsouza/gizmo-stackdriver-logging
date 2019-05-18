@@ -6,7 +6,7 @@ require (
 	github.com/kelseyhightower/envconfig v1.3.0
 	github.com/knq/sdhook v0.0.0-20190512234213-4d2800fd245c
 	github.com/marzagao/logrus-env v0.0.0-20170629235526-367f558eb6f3
-	github.com/sirupsen/logrus v1.4.1
+	github.com/sirupsen/logrus v1.4.2
 )
 
 go 1.13
