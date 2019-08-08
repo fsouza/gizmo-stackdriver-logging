@@ -1,8 +1,5 @@
 language: go
 sudo: false
-cache:
-  directories:
-    - $GOPATH/pkg
 go:
   - 1.x
 install:
