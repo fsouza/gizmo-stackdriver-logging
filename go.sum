@@ -45,6 +45,8 @@ github.com/knq/pemutil v0.0.0-20181215144041-fb6fad722528 h1:W50e/aaqE/OF4zTsWRf
 github.com/knq/pemutil v0.0.0-20181215144041-fb6fad722528/go.mod h1:2VjBu5gkjU1wG99pRhJ+zm/P4bHnjdRY0CIMP9Gvn7Q=
 github.com/knq/sdhook v0.0.0-20190512234213-4d2800fd245c h1:prkmSQfLQQjeUqmwo5uCvHQjf13hdgTQq5c4YjGOZGk=
 github.com/knq/sdhook v0.0.0-20190512234213-4d2800fd245c/go.mod h1:YActjSMTbqNCLzYRAgL+4cP6LHj46roJGtFl/iIKBRI=
+github.com/knq/sdhook v0.0.0-20190801142816-0b7fa827d09a h1:ISpJvNQW7atuiFtuI4eYn+7OR6LkebeEg66toOw+0tM=
+github.com/knq/sdhook v0.0.0-20190801142816-0b7fa827d09a/go.mod h1:YActjSMTbqNCLzYRAgL+4cP6LHj46roJGtFl/iIKBRI=
 github.com/konsorten/go-windows-terminal-sequences v1.0.1 h1:mweAR1A6xJ3oS2pRaGiHgQ4OO8tzTaLawm8vnODuwDk=
 github.com/konsorten/go-windows-terminal-sequences v1.0.1/go.mod h1:T0+1ngSBFLxvqU3pZ+m/2kptfBszLMUkC4ZK/EgS/cQ=
 github.com/konsorten/go-windows-terminal-sequences v1.0.2 h1:DB17ag19krx9CFsz4o3enTrPXyIXCl+2iCXH/aMAp9s=
