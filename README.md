@@ -1,5 +1,7 @@
 # gizmo-stackdriver-logging
 
+[![Build Status](https://github.com/fsouza/gizmo-stackdriver-logging/workflows/Build/badge.svg)](https://github.com/fsouza/gizmo-stackdriver-logging/actions)
+
 This repository provides a library that aims to provide a
 StackDriver-integrated logging library that follows
 [Gizmo](https://github.com/NYTimes/gizmo)'s conventions for loading
