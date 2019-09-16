@@ -29,7 +29,7 @@ jobs:
           GOROOT: /usr/local/go
         with:
           entrypoint: golangci-lint
-          args: run --enable-all -D lll -D errcheck
+          args: run
 
       - name: run-tests
         run: go test -mod readonly -race
