@@ -2,6 +2,10 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
+// Package logging provides the configuration object for a
+// StackDriver-integrated logger.
+//
+// It supports loading the configuration values using envconfig.
 package logging
 
 import (
@@ -47,6 +51,7 @@ func (c *Config) Logger() (*logrus.Logger, error) {
 	logger.Level = level
 	logger.Hooks.Add(logrus_stack.StandardHook())
 	logger.Hooks.Add(logrus_env.NewHook(c.EnvironmentVariables))
+
 	if c.SendToStackDriver {
 		var opts []sdhook.Option
 		if c.StackDriverCredentialsFile != "" {
@@ -54,17 +59,21 @@ func (c *Config) Logger() (*logrus.Logger, error) {
 		} else {
 			opts = []sdhook.Option{sdhook.GoogleLoggingAgent()}
 		}
+
 		if c.StackDriverErrorServiceName != "" {
 			opts = append(opts,
 				sdhook.ErrorReportingService(c.StackDriverErrorServiceName),
 				sdhook.ErrorReportingLogName(c.StackDriverErrorLogName),
 			)
 		}
+
 		gcpLoggingHook, err := sdhook.New(opts...)
 		if err != nil {
 			return nil, err
 		}
+
 		logger.Hooks.Add(gcpLoggingHook)
 	}
+
 	return logger, nil
 }

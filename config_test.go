@@ -64,6 +64,7 @@ func TestLoadConfigFromEnvironment(t *testing.T) {
 			},
 		},
 	}
+
 	for _, test := range tests {
 		test := test
 		t.Run(test.name, func(t *testing.T) {
@@ -87,13 +88,16 @@ func TestLogger(t *testing.T) {
 		SendToStackDriver:           true,
 		StackDriverErrorServiceName: "logging-test",
 	}
+
 	logger, err := cfg.Logger()
 	if err != nil {
 		t.Fatal(err)
 	}
+
 	if logger.Level != logrus.DebugLevel {
 		t.Errorf("wrong level\nwant %v\ngot  %v", logrus.DebugLevel, logger.Level)
 	}
+
 	if logger.Out != os.Stdout {
 		t.Errorf("wrong log output\nshould send logs to stdout, it's sending to: %#v", logger.Out)
 	}
@@ -101,10 +105,12 @@ func TestLogger(t *testing.T) {
 
 func TestLoggerInvalidLevel(t *testing.T) {
 	cfg := Config{Level: "bananas"}
+
 	logger, err := cfg.Logger()
 	if err == nil {
 		t.Error("unexpected <nil> error")
 	}
+
 	if logger != nil {
 		t.Errorf("unexpected non-nil logger: %#v", logger)
 	}
@@ -112,6 +118,7 @@ func TestLoggerInvalidLevel(t *testing.T) {
 
 func setEnvs(envs map[string]string) {
 	os.Clearenv()
+
 	for name, value := range envs {
 		os.Setenv(name, value)
 	}
