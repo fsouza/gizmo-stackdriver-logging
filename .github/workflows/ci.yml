@@ -13,9 +13,8 @@ jobs:
     strategy:
       matrix:
         go_version:
-          - 1.12
           - 1.13
-          - 1.14.0-rc
+          - 1.14
         os:
           - macos
           - ubuntu
@@ -23,11 +22,11 @@ jobs:
     name: Build (${{ matrix.os }}/go-${{ matrix.go_version }})
     runs-on: ${{ matrix.os }}-latest
     steps:
-      - uses: actions/setup-go@master
+      - uses: fsouza/setup-go@add-gobin
         id: go
         with:
           stable: false
-          go-version: "^${{ matrix.go_version }}"
+          go-version: ${{ matrix.go_version }}
 
       - uses: actions/checkout@master
 
@@ -38,12 +37,9 @@ jobs:
             cd /tmp
             env GO111MODULE=on go get github.com/golangci/golangci-lint/cmd/golangci-lint@latest
           )
-        env:
-          GOPROXY: https://proxy.golang.org
 
       - name: run-linter
-        run: |
-          $(go env GOPATH)/bin/golangci-lint run
+        run: golangci-lint run
         env:
           GOPROXY: off
           GOFLAGS: -mod=readonly
