@@ -14,7 +14,7 @@ import (
 )
 
 func TestLoadConfigFromEnvironment(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		name           string
 		envs           map[string]string
 		expectedConfig Config
